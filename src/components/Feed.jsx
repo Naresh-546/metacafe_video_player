@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import { BorderRight } from "@mui/icons-material";
-import Sidebar from "./Sidebar";
+import { Sidebar, Videos } from "./index";
 
 const Feed = () => {
   return (
@@ -16,6 +16,12 @@ const Feed = () => {
         <Typography className="copyright" variant="body2" sx={{mt:1.5, color: "#fff"}}> 
           Copyright 2022 MetaCafe.
         </Typography>
+      </Box>
+      <Box p={2} sx={{overflowY: "auto", height: "95vh", flex: 2}}>
+        <Typography variant="h4" fontWeight="bold" mb={2} sx={{color:'white'}}> 
+         New  <span style={{ color: "#F31503"}}>Videos</span>
+        </Typography>
+        <Videos Videos={[]}/>
       </Box>
     </Stack>
   );
