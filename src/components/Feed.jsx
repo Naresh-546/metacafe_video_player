@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import { Sidebar, Videos } from "./index";
+import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const Feed = () => {
 
   const [selectedCategory, setSelectedCategory] = useState('New');
   const [video, setVideo] = useState([]);
+
+  useEffect(()=>{
+    fetchFromAPI(`search?part=snippet&=${selectedCategory}`);
+  },[selectedCategory]);
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
