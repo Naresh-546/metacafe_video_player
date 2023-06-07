@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-import { Video, Sidebar } from "./";
+import { Videos, Sidebar } from "./";
 
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
@@ -28,7 +28,7 @@ const Feed = () => {
           {selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
         </Typography>
 
-        <Video newVideos={newVideos} />
+        <Videos newVideos={newVideos} />
       </Box>
     </Stack>
   );
