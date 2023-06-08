@@ -33,7 +33,7 @@ const VideoCard = ({
         </Link>
         <Link to={snippet?.channelId ? `/channel/${snippet.channelId}` : demoChannelUrl}>
           <Typography variant="subtitle2" fontWeight="bold" color="grey">
-            {snippet?.ChannelTitle || demoChannelTitle}
+            {snippet?.channelTitle || demoChannelTitle}
             <CheckCircle sx={{ fontSize: 12, color: 'grey', ml: '5px'}} />
           </Typography>
         </Link>
