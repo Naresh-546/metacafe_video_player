@@ -12,7 +12,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
       display: 'flex',
       alignItems:'center',
       justifyContent:'center',
-      width:{xs:'356px', md: '320px'},
+      width:{xs:'300px', md: '370px'},
       height:'326px',
       margin:'auto',
       marginTop,
